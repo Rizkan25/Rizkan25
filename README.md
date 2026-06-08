@@ -1,21 +1,51 @@
-## Hi there 👋
+<div align="center">
 
-<h1 align="center">Hi 👋, I'm Maula Rizkan</h1>
-<h3 align="center">A passionate frontend developer from Indonesia</h3>
+# Hi 👋, I'm Maula Rizkan
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=rizkan25&label=Profile%20views&color=0e75b6&style=flat" alt="rizkan25" /> </p>
+### A passionate frontend developer from Indonesia 🇮🇩
 
-- 📫 How to reach me **maularizkan2106@gmail.com**
+[![Profile Views](https://komarev.com/ghpvc/?username=Rizkan25&color=blueviolet&style=for-the-badge&label=Profile+Views)](https://github.com/Rizkan25)
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
+📫 How to reach me: **[maularizkan2106@gmail.com](mailto:maularizkan2106@gmail.com)**
+
+<br />
+<hr />
+
+## 🛠️ Tech Stack & Tools
+
+<br />
+
+### 🎨 Frontend & UI
+<a href="https://skillicons.dev">
+  <img src="https://skillicons.dev/icons?i=html,css,js,flutter,electron" alt="Frontend Skills" />
+</a>
+
+<br />
+
+### ⚙️ Backend & Frameworks
+<a href="https://skillicons.dev">
+  <img src="https://skillicons.dev/icons?i=nodejs,python,django,laravel" alt="Backend Skills" />
+</a>
+
+<br />
+
+### 🧰 Tools & Others
+<a href="https://skillicons.dev">
+  <img src="https://skillicons.dev/icons?i=tensorflow,git,linux" alt="Tools & Others" />
+</a>
+
+<br />
+<br />
+<hr />
+
+## 📊 GitHub Stats
+
+<br />
+
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Rizkan25&theme=tokyonight&hide_border=true" alt="Rizkan25 GitHub Streak" />
 </p>
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/django.svg" alt="django" width="40" height="40"/> </a> <a href="https://www.electronjs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/electron/electron-original.svg" alt="electron" width="40" height="40"/> </a> <a href="https://flutter.dev" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="flutter" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://laravel.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-plain-wordmark.svg" alt="laravel" width="40" height="40"/> </a> <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> <a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg" alt="pandas" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://www.tensorflow.org" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="tensorflow" width="40" height="40"/> </a> </p>
+<br />
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=rizkan25&show_icons=true&theme=tokyonight&locale=en&layout=compact" alt="rizkan25" /></p>
-
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=rizkan25&show_icons=true&theme=tokyonight&locale=en" alt="rizkan25" /></p>
-
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=rizkan25&theme=dark" alt="Rizkan25" /></p>
+</div>
