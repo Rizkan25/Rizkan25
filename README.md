@@ -12,7 +12,7 @@
   <a href="https://github.com/Rizkan25">
     <img src="https://komarev.com/ghpvc/?username=Rizkan25&color=blueviolet&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile Views" />
   </a>
-  <a href="mailto:maularizkan2106@gmail.com">
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=maularizkan2106@gmail.com" target="_blank">
     <img src="https://img.shields.io/badge/Hit_Me_Up-maularizkan2106@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" />
   </a>
 </div>
