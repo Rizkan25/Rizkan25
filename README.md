@@ -1,6 +1,8 @@
 <div align="center">
 
-[![Header SVG](https://readme-typing-svg.herokuapp.com?font=Inter&weight=800&size=32&color=FFFFFF&center=true&vCenter=true&width=900&duration=2500&repeat=false&lines=⚡+Welcome+to+my+random+code+lab!+👋+I'm+Maula+Rizkan)](https://git.io/typing-svg)
+<img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="40" />
+
+[![Header SVG](https://readme-typing-svg.herokuapp.com?font=Inter&weight=800&size=32&color=FFFFFF&center=true&vCenter=true&width=900&duration=3000&repeat=false&lines=⚡+Welcome+to+my+random+code+lab!+I'm+Maula+Rizkan)](https://git.io/typing-svg)
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Inter&weight=600&size=25&pause=1000&color=FDB813;8A2BE2;FDB813;8A2BE2&center=true&vCenter=true&width=800&lines=Just+a+Random+Programmer+passing+by+👽;Turning+caffeine+into+AI+prompts+☕;Coding+with+AI+Mon-Sat,+offline+on+Sunday+🗿;AI+is+my+co-pilot,+but+I'm+the+captain+👨‍✈️)](https://git.io/typing-svg)
 
