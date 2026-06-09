@@ -1,8 +1,8 @@
 <div align="center">
 
-[![Header SVG](https://readme-typing-svg.herokuapp.com?font=Inter&weight=800&size=32&color=FFFFFF&center=true&vCenter=true&width=900&duration=3000&repeat=false&lines=⚡+Welcome+to+my+random+code+lab!+👋+I'm+Maula+Rizkan)](https://git.io/typing-svg)
+<img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35" /> [![Header SVG](https://readme-typing-svg.herokuapp.com?font=Inter&weight=800&size=32&color=FFFFFF&center=false&vCenter=true&width=750&duration=3000&repeat=false&lines=⚡+Welcome+to+my+random+code+lab!+I'm+Maula+Rizkan)](https://git.io/typing-svg)
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Inter&weight=600&size=25&pause=1000&color=FDB813;8A2BE2;FDB813;8A2BE2&center=true&vCenter=true&width=800&lines=Just+a+Random+Programmer+passing+by+👽;Turning+caffeine+into+AI+prompts+☕;Coding+with+AI+Mon-Sat,+offline+on+Sunday+🗿;AI+is+my+co-pilot,+but+I'm+the+captain+👨‍✈️)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Inter&weight=600&size=25&pause=1000&color=FDB813;8A2BE2;FDB813;8A2BE2&center=true&vCenter=true&width=800&lines=Just+a+Random+Programmer+passing+by+👽;Turning+caffeine+into+AI+prompts+☕;Coding+with+AI+Mon-Sat,+offline+on+Sunday+🗿;AI+is+my+co-pilot,+but+I'm+the+captain+👨‍✈8)](https://git.io/typing-svg)
 
 <br />
 
@@ -14,7 +14,11 @@
   </a>
   
   <a href="https://mail.google.com/mail/?view=cm&fs=1&to=maularizkan2106@gmail.com" target="_blank">
-    <img src="https://img.shields.io/badge/Email-maularizkan2106@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" />
+    <img src="https://img.shields.io/badge/EMAIL-maularizkan2106@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" />
+  </a>
+
+  <a href="https://wakatime.com/@Rizkan25">
+    <img src="https://img.shields.io/badge/CODING_ACTIVITY-WakaTime-blue?style=for-the-badge&logo=wakatime" alt="Coding Activity" />
   </a>
 </div>
 
