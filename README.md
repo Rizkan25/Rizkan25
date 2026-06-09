@@ -29,8 +29,11 @@
 
 <br />
 
-### ◈ FRONTEND
+| ◈ FRONTEND |
+| :---: |
+
 <br />
+
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
 <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" />
@@ -38,16 +41,22 @@
 
 <br /><br /><br />
 
-### ◈ BACKEND
+| ◈ BACKEND |
+| :---: |
+
 <br />
+
 <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
 <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
 <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" />
 
 <br /><br /><br />
 
-### ◈ FRAMEWORKS
+| ◈ FRAMEWORKS |
+| :---: |
+
 <br />
+
 <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" />
 <img src="https://img.shields.io/badge/Electron-47848F?style=for-the-badge&logo=electron&logoColor=white" />
 <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" />
@@ -55,8 +64,11 @@
 
 <br /><br /><br />
 
-### ◈ TOOLS & LIBRARIES
+| ◈ TOOLS & LIBRARIES |
+| :---: |
+
 <br />
+
 <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
 <img src="https://img.shields.io/badge/Linux-000000?style=for-the-badge&logo=linux&logoColor=white" />
 
