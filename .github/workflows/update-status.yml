@@ -9,7 +9,6 @@ on:
 jobs:
   update-status:
     runs-on: ubuntu-latest
-    # Skip workflow jika commit berasal dari github-actions bot (mencegah infinite loop)
     if: github.actor != 'github-actions[bot]'
     
     steps:
@@ -26,55 +25,81 @@ jobs:
           NOW=$(date +%s)
           DIFF_SECONDS=$((NOW - LAST_COMMIT))
           DIFF_HOURS=$((DIFF_SECONDS / 3600))
-          DIFF_DAYS=$((DIFF_HOURS / 24))
+          DIFF_DAYS=$((DIFF_SECONDS / 86400))
+          DIFF_WEEKS=$((DIFF_DAYS / 7))
+          DIFF_MONTHS=$((DIFF_DAYS / 30))
+          DIFF_YEARS=$((DIFF_DAYS / 365))
           
           # Tentukan status berdasarkan waktu
-          if [ $DIFF_HOURS -lt 2 ]; then
-            STATUS="Online"
+          if [ $DIFF_HOURS -lt 24 ]; then
+            # Hari ini
+            STATUS="Today"
             COLOR="28A745"
             EMOJI="🟢"
-            DESC="Currently_Coding"
-          elif [ $DIFF_HOURS -lt 24 ]; then
-            STATUS="Active_${DIFF_HOURS}h_ago"
+          elif [ $DIFF_DAYS -eq 1 ]; then
+            # Kemarin
+            STATUS="Yesterday"
             COLOR="FFA500"
             EMOJI="🟡"
-            DESC="Recently_Active"
           elif [ $DIFF_DAYS -lt 7 ]; then
-            STATUS="Offline_${DIFF_DAYS}d_ago"
+            # Nama hari (Monday, Tuesday, dll)
+            DAY_OF_WEEK=$(date -d "@$LAST_COMMIT" +%A)
+            STATUS="$DAY_OF_WEEK"
+            COLOR="FFA500"
+            EMOJI="🟡"
+          elif [ $DIFF_WEEKS -eq 1 ]; then
+            # Minggu lalu
+            STATUS="Last_week"
+            COLOR="FF8C00"
+            EMOJI="🟠"
+          elif [ $DIFF_WEEKS -lt 4 ]; then
+            # X minggu lalu
+            STATUS="${DIFF_WEEKS}_weeks_ago"
+            COLOR="FF8C00"
+            EMOJI="🟠"
+          elif [ $DIFF_MONTHS -eq 1 ]; then
+            # Bulan lalu
+            STATUS="Last_month"
+            COLOR="FF6347"
+            EMOJI="🟠"
+          elif [ $DIFF_MONTHS -lt 12 ]; then
+            # X bulan lalu
+            STATUS="${DIFF_MONTHS}_months_ago"
+            COLOR="FF6347"
+            EMOJI="🟠"
+          elif [ $DIFF_YEARS -eq 1 ]; then
+            # Tahun lalu
+            STATUS="Last_year"
             COLOR="DC3545"
             EMOJI="🔴"
-            DESC="Last_Seen_${DIFF_DAYS}d_Ago"
           else
-            STATUS="Offline_${DIFF_DAYS}d_ago"
-            COLOR="8B0000"
-            EMOJI="⚫"
-            DESC="Inactive_${DIFF_DAYS}d"
+            # X tahun lalu
+            STATUS="${DIFF_YEARS}_years_ago"
+            COLOR="DC3545"
+            EMOJI="🔴"
           fi
           
           echo "status=$STATUS" >> $GITHUB_OUTPUT
           echo "color=$COLOR" >> $GITHUB_OUTPUT
           echo "emoji=$EMOJI" >> $GITHUB_OUTPUT
-          echo "desc=$DESC" >> $GITHUB_OUTPUT
           
           echo "📊 Status: $EMOJI $STATUS"
           echo "🎨 Color: #$COLOR"
-          echo "⏰ Last commit: ${DIFF_HOURS}h ago"
+          echo "⏰ Last commit: ${DIFF_DAYS} days ago"
 
       - name: Update README.md
         run: |
           # Replace status badge di README.md
-          # Pattern: STATUS-[anything]-[color]?style=for-the-badge&logo=github
           sed -i -E "s|STATUS-[^-]*-[^?]*\?style=for-the-badge\&logo=github|STATUS-${{ steps.status.outputs.status }}-${{ steps.status.outputs.color }}?style=for-the-badge\&logo=github|g" README.md
           
           echo "✅ README.md updated"
-          cat README.md | grep "STATUS-" | head -1
+          grep "STATUS-" README.md | head -1
 
       - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Cek apakah ada perubahan
           if git diff --quiet README.md; then
             echo "ℹ️  No changes to commit"
           else
