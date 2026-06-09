@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35" /> [![Header SVG](https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=32&color=FFFFFF&center=false&vCenter=true&width=750&duration=3000&repeat=false&lines=⚡+Welcome+to+my+random+code+lab!+👋+I'm+Maula+Rizkan)](https://git.io/typing-svg)
+[![Header SVG](https://readme-typing-svg.demolab.com?font=Inter&weight=800&size=32&color=FFFFFF&center=true&vCenter=true&width=1100&duration=3000&repeat=false&lines=⚡+Welcome+to+my+random+code+lab!+👋+I'm+Maula+Rizkan)](https://git.io/typing-svg)
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Inter&weight=600&size=25&pause=1000&color=FDB813;8A2BE2;FDB813;8A2BE2&center=true&vCenter=true&width=800&lines=Just+a+Random+Programmer+passing+by+👽;Turning+caffeine+into+AI+prompts+☕;Coding+with+AI+Mon-Sat,+offline+on+Sunday+🗿;AI+is+my+co-pilot,+but+I'm+the+captain+👨‍✈️)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Inter&weight=600&size=25&pause=1000&color=FDB813;8A2BE2;FDB813;8A2BE2&center=true&vCenter=true&width=1100&lines=Just+a+Random+Programmer+passing+by+;Turning+caffeine+into+AI+prompts+☕;Coding+with+AI+Mon-Sat,+offline+on+Sunday+🗿;AI+is+my+co-pilot,+but+I'm+the+captain+👨‍✈️)](https://git.io/typing-svg)
 
 <br />
 
@@ -103,7 +103,7 @@
 
 <br /><br />
 
-### ◈ AI CODING ASSISTANTS
+###  AI CODING ASSISTANTS
 
 <table>
   <tr>
