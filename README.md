@@ -18,7 +18,7 @@
   </a>
 
   <a href="https://github.com/Rizkan25" target="_blank">
-    <img src="https://img.shields.io/github/last-commit/Rizkan25/Rizkan25?style=for-the-badge&label=LAST+ACTIVE&color=28A745&logo=github&logoColor=white" alt="Last Active" />
+    <img src="https://github-readme-stats.vercel.app/api?username=Rizkan25&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117" alt="GitHub Stats" />
   </a>
 </div>
 
