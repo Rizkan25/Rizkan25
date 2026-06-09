@@ -1,17 +1,30 @@
-name: Update Status
+name: Generate Snake Animation
+
 on:
   schedule:
-    - cron: '*/15 * * * *'
-  workflow_dispatch:
+    - cron: "0 0 * * *"
+  push:
+    branches:
+      - main
 
 jobs:
-  update-status:
+  generate:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    timeout-minutes: 10
+    
     steps:
-      - name: GitHub Activity Status
-        uses: lowlighter/metrics@latest
+      - name: Generate snake animation
+        uses: Platane/snk/svg-only@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          config_timezone: Asia/Jakarta
+          github_user_name: Rizkan25
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      - name: Push to output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
