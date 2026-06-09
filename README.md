@@ -18,7 +18,7 @@
   </a>
 
   <a href="https://github.com/Rizkan25" target="_blank">
-    <img src="https://img.shields.io/badge/STATUS-Active_Developer-28A745?style=for-the-badge&logo=github&logoColor=white" alt="Status" />
+    <img src="https://img.shields.io/badge/STATUS-Today-28A745?style=for-the-badge&logo=github&logoColor=white" alt="Status" />
   </a>
 </div>
 
