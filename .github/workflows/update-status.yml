@@ -1,64 +1,85 @@
 name: Update Online Status
 
 on:
-  schedule:
-    - cron: '0 * * * *'  # Setiap jam
-  workflow_dispatch:  # Bisa dijalankan manual
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
-  update:
+  update-status:
     runs-on: ubuntu-latest
+    # Skip workflow jika commit berasal dari github-actions bot (mencegah infinite loop)
+    if: github.actor != 'github-actions[bot]'
+    
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Check last activity and update status
-        id: activity
+      - name: Calculate time since last commit
+        id: status
         run: |
-          # Get last commit timestamp
-          LAST_COMMIT=$(git log -1 --format=%ct 2>/dev/null || echo 0)
+          # Ambil timestamp commit terakhir
+          LAST_COMMIT=$(git log -1 --format=%ct)
           NOW=$(date +%s)
-          DIFF_HOURS=$(( (NOW - LAST_COMMIT) / 3600 ))
+          DIFF_SECONDS=$((NOW - LAST_COMMIT))
+          DIFF_HOURS=$((DIFF_SECONDS / 3600))
+          DIFF_DAYS=$((DIFF_HOURS / 24))
           
-          # Determine status and color
+          # Tentukan status berdasarkan waktu
           if [ $DIFF_HOURS -lt 2 ]; then
-            STATUS="Online_🟢"
+            STATUS="Online"
             COLOR="28A745"
-            BADGE_TEXT="Currently_Coding"
+            EMOJI="🟢"
+            DESC="Currently_Coding"
           elif [ $DIFF_HOURS -lt 24 ]; then
-            STATUS="Recently_Active_🟡"
+            STATUS="Active_${DIFF_HOURS}h_ago"
             COLOR="FFA500"
-            BADGE_TEXT="Last_Active_${DIFF_HOURS}h_ago"
-          else
-            STATUS="Offline_🔴"
+            EMOJI="🟡"
+            DESC="Recently_Active"
+          elif [ $DIFF_DAYS -lt 7 ]; then
+            STATUS="Offline_${DIFF_DAYS}d_ago"
             COLOR="DC3545"
-            BADGE_TEXT="Last_Active_${DIFF_HOURS}h_ago"
+            EMOJI="🔴"
+            DESC="Last_Seen_${DIFF_DAYS}d_Ago"
+          else
+            STATUS="Offline_${DIFF_DAYS}d_ago"
+            COLOR="8B0000"
+            EMOJI="⚫"
+            DESC="Inactive_${DIFF_DAYS}d"
           fi
           
           echo "status=$STATUS" >> $GITHUB_OUTPUT
           echo "color=$COLOR" >> $GITHUB_OUTPUT
-          echo "badge_text=$BADGE_TEXT" >> $GITHUB_OUTPUT
+          echo "emoji=$EMOJI" >> $GITHUB_OUTPUT
+          echo "desc=$DESC" >> $GITHUB_OUTPUT
           
-          # Update README.md
-          sed -i "s|STATUS-[^\?]*\?style|STATUS-${BADGE_TEXT}-${COLOR}?style|g" README.md
+          echo "📊 Status: $EMOJI $STATUS"
+          echo "🎨 Color: #$COLOR"
+          echo "⏰ Last commit: ${DIFF_HOURS}h ago"
+
+      - name: Update README.md
+        run: |
+          # Replace status badge di README.md
+          # Pattern: STATUS-[anything]-[color]?style=for-the-badge&logo=github
+          sed -i -E "s|STATUS-[^-]*-[^?]*\?style=for-the-badge\&logo=github|STATUS-${{ steps.status.outputs.status }}-${{ steps.status.outputs.color }}?style=for-the-badge\&logo=github|g" README.md
           
-          # Configure git
+          echo "✅ README.md updated"
+          cat README.md | grep "STATUS-" | head -1
+
+      - name: Commit and push changes
+        run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Check if there are changes
-          if ! git diff --quiet README.md; then
-            git add README.md
-            git commit -m "🤖 Update status: $STATUS"
-            git push
-            echo "updated=true" >> $GITHUB_OUTPUT
+          # Cek apakah ada perubahan
+          if git diff --quiet README.md; then
+            echo "ℹ️  No changes to commit"
           else
-            echo "updated=false" >> $GITHUB_OUTPUT
+            git add README.md
+            git commit -m "🤖 Auto-update status: ${{ steps.status.outputs.emoji }} ${{ steps.status.outputs.status }}"
+            git push
+            echo "✅ Changes pushed successfully"
           fi
-
-      - name: Show status
-        run: |
-          echo "Status: ${{ steps.activity.outputs.status }}"
-          echo "Color: ${{ steps.activity.outputs.color }}"
-          echo "Badge: ${{ steps.activity.outputs.badge_text }}"
-          echo "Updated: ${{ steps.activity.outputs.updated }}"
