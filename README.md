@@ -17,8 +17,8 @@
     <img src="https://img.shields.io/badge/EMAIL-maularizkan2106@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" />
   </a>
 
-  <a href="https://github.com/Rizkan25">
-    <img src="https://github-readme-activity-status.vercel.app/api/activity?username=Rizkan25&style=for-the-badge" alt="Online Status" />
+  <a href="https://github.com/Rizkan25" target="_blank">
+    <img src="https://img.shields.io/github/last-commit/Rizkan25/Rizkan25?style=for-the-badge&label=LAST+ACTIVE&color=28A745&logo=github&logoColor=white" alt="Last Active" />
   </a>
 </div>
 
@@ -79,7 +79,34 @@
 ## ▸ GitHub Activity
 
 <div align="center">
-  <img src="https://streak-stats.demolab.com/?user=Rizkan25&theme=tokyonight&hide_border=true&background=0D1117" alt="Rizkan25 GitHub Streak" />
+  <!-- GitHub Streak Stats -->
+  <img src="https://streak-stats.demolab.com/?user=Rizkan25&theme=tokyonight&hide_border=true&background=0D1117&currStreakLabel=58A6FF" alt="Rizkan25 GitHub Streak" />
+</div>
+
+<br />
+
+<div align="center">
+  <!-- Profile Summary Cards -->
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Rizkan25&theme=tokyonight" alt="Profile Details" />
+</div>
+
+<br />
+
+<div align="center">
+  <!-- Language Statistics -->
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Rizkan25&theme=tokyonight" alt="Repos Per Language" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Rizkan25&theme=tokyonight" alt="Most Commit Language" />
+</div>
+
+<br />
+
+<div align="center">
+  <!-- Snake Contribution Graph -->
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Rizkan25/Rizkan25/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Rizkan25/Rizkan25/output/github-contribution-grid-snake.svg">
+    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/Rizkan25/Rizkan25/output/github-contribution-grid-snake.svg">
+  </picture>
 </div>
 
 </div>
