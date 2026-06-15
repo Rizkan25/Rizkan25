@@ -6,25 +6,41 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    permissions:
+      contents: write
     
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Generate snake animation
-        uses: Platane/snk/svg-only@v3
+        uses: Platane/snk@v3
+        id: snake-gif
         with:
-          github_user_name: Rizkan25
+          github_user_name: ${{ github.repository_owner }}
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
-      - name: Push to output branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
-        with:
-          target_branch: output
-          build_dir: dist
+      - name: Commit and push generated files
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Buat branch output jika belum ada
+          git checkout -b output 2>/dev/null || git checkout output
+          
+          # Copy file dari dist ke root
+          cp dist/*.svg .
+          
+          # Commit dan push
+          git add github-contribution-grid-snake*.svg
+          git commit -m " Update snake animation" || echo "No changes to commit"
+          git push origin output --force
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
